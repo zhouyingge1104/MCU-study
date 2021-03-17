@@ -1,13 +1,13 @@
 #include<reg52.h>
 //#define led P0
-sbit led1 = P1^0;
-sbit led2 = P1^1;
-sbit led3 = P1^2;
-sbit led4 = P1^3;
-sbit led5 = P1^4;
-sbit led6 = P1^5;
-sbit led7 = P1^6;
-sbit led8 = P1^7;
+int led1 = P1^0;
+int led2 = P1^1;
+int led3 = P1^2;
+int led4 = P1^3;
+int led5 = P1^4;
+int led6 = P1^5;
+int led7 = P1^6;
+int led8 = P1^7;
 
 void main()
 {

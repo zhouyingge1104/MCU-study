@@ -1,0 +1,65 @@
+C51 COMPILER V9.60.0.0   MAIN                                                              03/17/2021 19:05:57 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #define uint unsigned int //16 0-65535
+   3          #define on 0
+   4          #define off 1
+   5          
+   6          sbit led1 = P1^0;
+   7          sbit led2 = P1^1;
+   8          sbit led3 = P1^2;
+   9          sbit led4 = P1^3;
+  10          sbit led5 = P1^4;
+  11          sbit led6 = P1^5;
+  12          sbit led7 = P1^6;
+  13          sbit led8 = P1^7;
+  14          
+  15          void delay(uint xms) //delay xml
+  16          {
+  17   1        uint i, j;
+  18   1        for(i=xms;i>0;i--)
+  19   1        {
+  20   2            for(j=112;j>0;j--){}
+  21   2        }
+  22   1      }
+  23          
+  24          void main()
+  25          {
+  26   1        while(1)
+  27   1        {
+  28   2          //P1^1=0
+  29   2          led1 = on; delay(200); led1 = off;
+  30   2          led2 = on; delay(200); led2 = off;
+  31   2          led3 = on; delay(200); led3 = off;
+  32   2          led4 = on; delay(200); led4 = off;
+  33   2          led5 = on; delay(200); led5 = off;
+  34   2          led6 = on; delay(200); led6 = off;
+  35   2          led7 = on; delay(200); led7 = off;
+  36   2          led8 = on; delay(200); led8 = off;
+  37   2          
+  38   2        }
+  39   1      }
+  40          
+  41          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     92    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
